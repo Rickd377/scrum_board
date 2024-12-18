@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(#ffe2fe, #d5ecff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  line-height: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+  }
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty;
+}
+
+img, picture, svg, video {
+  display: block;
+  max-width: 100%;
+}
+
+.board {
+  width: 80%;
+  height: 90vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+  box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.board .board-head {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #ccc;
+  grid-column: span 5;
+  -moz-column-gap: 1px;
+       column-gap: 1px;
+  place-items: center;
+  border-bottom: 1px solid #ccc;
+  height: 4rem;
+}
+.board .board-head div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  font-weight: bold;
+}
+.board .board-main {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+.board .board-main > div {
+  background-color: #fff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 4rem;
+}
+.board .board-main > div .wrapper-board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  perspective: 1000px;
+  padding: 1rem;
+  gap: 1rem;
+}
+.board .board-main .card {
+  transform-style: preserve-3d;
+  transform: translateZ(10px) rotateX(10deg);
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  grid-template-rows: 25px 1fr 1fr;
+  background-color: var(--b);
+  height: 230px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+.board .board-main .card .sticker {
+  grid-column: span 2;
+  background-color: var(--dark-b);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding-inline: 0.5em;
+}
+.board .board-main .card .sticker i {
+  cursor: pointer;
+}
+.board .board-main .card .sticker span {
+  cursor: default;
+}
+.board .board-main .card .sticker .fa-times {
+  color: red;
+}
+.board .board-main .card .description-card {
+  line-height: 1.3;
+  font-size: 0.9rem;
+  padding: 0.7em;
+  padding-bottom: 0;
+}
+.board .board-main .card .points-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-self: end;
+  align-self: start;
+  margin: 0.7em 0.5em 0 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.board .board-main .card .bottom-card {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  align-self: end;
+  margin-inline: 0.5em;
+  margin-bottom: 0.5em;
+}
+.board .board-main .card .bottom-card .name {
+  cursor: pointer;
+  padding: 0.2em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.board .board-main .card .bottom-card .name:hover {
+  outline: 2px solid #000;
+  border-radius: 50%;
+}
+
+.add-card {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.add-card-form {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.add-card-form form {
+  width: 450px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 1rem;
+}
+.add-card-form form .popup-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.add-card-form form .popup-wrapper h2 {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.add-card-form form .popup-wrapper i {
+  cursor: pointer;
+}
+.add-card-form form input {
+  width: 100%;
+  padding: 0.6em;
+  border-radius: 0.3rem;
+  outline: none;
+  border: 2px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+.add-card-form form input[type=submit] {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 0.5em;
+  border-radius: 0.3rem;
+  font-weight: 600;
+}/*# sourceMappingURL=style.css.map */

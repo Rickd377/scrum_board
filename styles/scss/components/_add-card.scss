@@ -1,0 +1,63 @@
+.add-card {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.add-card-form {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba($black_color, 0.5);
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 450px;
+    background-color: $white_color;
+    padding: 1rem;
+    border-radius: 1rem;
+    @include flex(start, start, column);
+    gap: 1rem;
+
+    .popup-wrapper {
+      @include flex(space-between);
+      width: 100%;
+
+      h2 {
+        font-size: 1.3em;
+        font-weight: 600;
+      }
+
+      i {
+        cursor: pointer;
+      }
+    }
+  
+    input {
+      width: 100%;
+      padding: .6em;
+      border-radius: .3rem;
+      outline: none;
+      border: 2px solid #ccc;
+      background-color: $white_color;
+      color: $black_color;
+
+      &[type="submit"] {
+        background-color: $black_color;
+        color: $white_color;
+        cursor: pointer;
+        border: none;
+        padding: .5em;
+        border-radius: .3rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

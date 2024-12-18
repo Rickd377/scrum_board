@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Scrum board">
+  <link rel="icon" type="image/x-icon" href="../assets/tab_icon_black.ico" media="(prefers-color-scheme: light)"/>
+  <link rel="icon" type="image/x-icon" href="../assets/tab_icon_white.ico" media="(prefers-color-scheme: dark)"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./styles/dist/css/style.css">
+  <title>Scrum board</title>
+</head>
+<body>
+
+  <div class="add-card"><span>Add card</span></div>
+  <div class="add-card-form">
+    <form action="" method="post">
+      <div class="popup-wrapper">
+        <h2>Add Card</h2>
+        <span class="close-popup"><i class="fa-solid fa-times"></i></span>
+      </div>
+      <input type="text" name="description" placeholder="Description" required>
+      <input type="number" name="points" placeholder="Points" required>
+      <input type="text" name="names" placeholder="Names (comma separated)" required>
+      <input type="submit" value="Add">
+    </form>
+  </div>
+
+  <div class="board">
+    <div class="board-head">
+      <div class="to-do">To do</div>
+      <div class="doing">Doing</div>
+      <div class="done">Done</div>
+    </div>
+    <div class="board-main">
+      <div class="to-do-board">
+        <div class="wrapper-board">
+          <div class="card" style="--b: #caf957;">
+            <div class="sticker" style="--dark-b: #b7f71c;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="doing-board">
+        <div class="wrapper-board">
+          <div class="card" style="--b: #ffff00;">
+            <div class="sticker" style="--dark-b: #f0f000;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #fdaedd;">
+            <div class="sticker" style="--dark-b: #fc95d3;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #ffff00;">
+            <div class="sticker" style="--dark-b: #f0f000;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="done-board">
+        <div class="wrapper-board">
+          <div class="card" style="--b: #caf957;">
+            <div class="sticker" style="--dark-b: #b7f71c;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #caf957;">
+            <div class="sticker" style="--dark-b: #b7f71c;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #fdaedd;">
+            <div class="sticker" style="--dark-b: #fc95d3;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #caf957;">
+            <div class="sticker" style="--dark-b: #b7f71c;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #caf957;">
+            <div class="sticker" style="--dark-b: #b7f71c;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #fdaedd;">
+            <div class="sticker" style="--dark-b: #fc95d3;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #caf957;">
+            <div class="sticker" style="--dark-b: #b7f71c;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+          <div class="card" style="--b: #ffff00;">
+            <div class="sticker" style="--dark-b: #f0f000;">
+              <i class="fa-solid fa-bars"></i>
+              <span class="card-sprint">S1</span>
+              <span class="card-title">Card 1</span>
+              <i class="fa-solid fa-times"></i>
+            </div>
+            <div class="description-card">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias eius suscipit reiciendis at iure inventore soluta, natus praesentium perspiciatis.
+            </div>
+            <div class="points-card">5</div>
+            <div class="bottom-card">
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+              <div class="name">RD</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/general.js"></script>
+</body>
+</html>
