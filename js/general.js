@@ -118,7 +118,7 @@ function addNameClickListener(card) {
         case 'border':
           name.style.outline = 'none';
           name.style.textDecoration = 'line-through';
-          name.style.color = '#888';
+          name.style.color = '#444';
           name.dataset.state = 'line-through';
           break;
         case 'line-through':
@@ -251,7 +251,7 @@ function loadBoardState() {
             case 'line-through':
               nameElement.style.outline = 'none';
               nameElement.style.textDecoration = 'line-through';
-              nameElement.style.color = '#888';
+              nameElement.style.color = '#444';
               break;
             case 'none':
             default:
@@ -287,7 +287,7 @@ function loadBoardState() {
                 case 'line-through':
                   nameElement.style.outline = 'none';
                   nameElement.style.textDecoration = 'line-through';
-                  nameElement.style.color = '#888';
+                  nameElement.style.color = '#444';
                   break;
                 case 'none':
                 default:
