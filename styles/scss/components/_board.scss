@@ -17,7 +17,6 @@
     column-gap: 1px;
     place-items: center;
     border-bottom: 1px solid $light_gray;
-    height: 4rem;
 
     div {
       @include flex;
@@ -38,15 +37,12 @@
       background-color: $white_color;
       overflow-x: hidden;
       overflow-y: auto;
-      padding-bottom: 4rem;
-
-      .wrapper-board {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        perspective: 1000px;
-        padding: 1rem;
-        gap: 1rem;
-      }
+      display: flex;
+      flex-wrap: wrap;
+      align-content: start;
+      perspective: 1000px;
+      padding: 1rem;
+      gap: 1rem;
     }
 
     .card {
@@ -57,7 +53,13 @@
       grid-template-rows: 25px 1fr 1fr;
       background-color: var(--b);
       height: 230px;
+      aspect-ratio: 1;
+      // width: calc(100% / 2 - .5rem);
       box-shadow: 0 10px 10px rgba($black_color, 0.1);
+
+      &:last-child {
+        margin-bottom: 4rem;
+      }
 
       .sticker {
         grid-column: span 2;
@@ -65,9 +67,23 @@
         @include flex(start);
         @include flex(space-between);
         padding-inline: .5em;
+        position: relative;
+
+        .shadow {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba($black_color, 0.05);
+          filter: blur(4px);
+          z-index: 1;
+        }
 
         i {
           cursor: pointer;
+          position: relative;
+          z-index: 2;
         }
         
         span {
@@ -84,6 +100,7 @@
         font-size: .9rem;
         padding: .7em;
         padding-bottom: 0;
+        word-break: break-all;
       }
 
       .points-card {
